@@ -78,3 +78,4 @@ fetchApi()
 window.addEventListener("scroll", () => {
     fetchApi();
 });
+
