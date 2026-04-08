@@ -13,17 +13,20 @@
     font-family: 'Outfit', sans-serif;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(--bg-primary, 0.1);
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     min-height: 100vh;
-}
-
-header {
-    padding: 2rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 2rem;
 }
 
 .logo {
@@ -89,6 +92,7 @@ header {
     font-weight: 600;
     line-height: 1.3;
 }
+
 #btn {
     display: block;
     margin: 0 auto 4rem auto;
@@ -98,4 +102,78 @@ header {
     background: var(--gradient);
     color: var(--text-primary);
     cursor: pointer;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-bottom-color: var(--accent);
+    border-radius: 50%;
+    margin: 2rem auto;
+    animation: rotation 1s linear infinite;
+    display: none;
+}
+
+.loader.active {
+    display: block;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.light-mode {
+    --bg-primary: #e2e8f0;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    float: right;
+    margin-top: -2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.theme-btn:hover {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.controls input,
+.controls select {
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.controls input:focus,
+.controls select:focus {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
 }

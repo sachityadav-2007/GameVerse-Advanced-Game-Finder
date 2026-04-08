@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
+    <header >
         <h1 class="logo">GameVerse</h1>
+        <button id="themeToggle" class="theme-btn">🌓</button>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search games...">
+            <select id="sortSelect">
+                <option value="default">Default</option>
+                <option value="asc">A-Z</option>
+                <option value="desc">Z-A</option>
+            </select>
+        </div>
     </header>
     <div id="container">
     </div>
-    <button id="btn">Show More</button>
+    <div id="loader" class="loader"></div>
     <script src="index.js"></script>
 </body>
 </html>
