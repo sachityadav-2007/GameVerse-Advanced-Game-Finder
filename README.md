@@ -9,6 +9,8 @@ A frontend web application that lets you explore thousands of games from around 
 GameVerse fetches live data from the [RAWG Video Games API](https://rawg.io/apidocs) and displays it in an interactive card-based UI. Users can search games by name, sort alphabetically, toggle between dark and light mode, and browse an infinite scroll of games.
 
 ---
+🚀 Live Demo :
+https://game-verse-advanced-game-finder.vercel.app/
 
 ## ✨ Features
 
@@ -78,7 +80,7 @@ No build tools or dependencies required. Just open `index.html` in your browser.
 
 ```bash
 # Clone or download the project
-git clone https://github.com/your-username/gameverse.git
+git clone :https://github.com/sachityadav-2007/GameVerse-Advanced-Game-Finder
 
 # Open in browser
 open index.html
